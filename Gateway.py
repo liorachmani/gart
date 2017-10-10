@@ -1,5 +1,6 @@
 from flask import Flask, url_for, jsonify, request
 import paho.mqtt.client as mqtt
+import os
 app = Flask(__name__)
 
 messages = []
@@ -20,4 +21,4 @@ def api_root2():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0' , port=int(os.environ.get("PORT" , 5000)))
