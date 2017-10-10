@@ -1,1 +1,1 @@
-web: python .
+web: python Gateway.py
